@@ -4,7 +4,7 @@
   "description": "GymPass style app.",
   "main": "index.js",
   "scripts": {
-    "start:dev": " tsx watch scr/server.ts ",
+    "start:dev": "tsx watch src/server.ts",
     "build": "tsup src --out-dir build",
     "start": "node /build/server.js"
   },
