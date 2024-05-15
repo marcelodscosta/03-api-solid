@@ -5,19 +5,19 @@
   "main": "index.js",
   "scripts": {
     "start:dev": " tsx watch scr/server.ts ",
-    "build": "tsup src --out-dir build", 
+    "build": "tsup src --out-dir build",
     "start": "node /build/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.12.12",
-    "tsup": "^8.0.2",
-    "tsx": "^4.10.2",
-    "typescript": "^5.4.5"
+    "@types/node": "20.12.12",
+    "tsup": "8.0.2",
+    "tsx": "4.10.2",
+    "typescript": "5.4.5"
   },
   "dependencies": {
-    "fastify": "^4.27.0"
+    "fastify": "4.27.0"
   }
 }
