@@ -1,6 +1,6 @@
 import { InMemoryCheckInRepository } from '@/repositories/in-memory/in-memory-check-in-repository'
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
-import { CheckInUseCase } from './check-in'
+import { CheckInUseCase } from '../check-in'
 import { InMemoryGymsRepository } from '@/repositories/in-memory/in-merory-gyms-repository'
 import { Decimal } from '@prisma/client/runtime/library'
 
