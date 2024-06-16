@@ -11,13 +11,13 @@ interface FetchNearbyGymsUseCaseResponse {
 }
 
 export class FetchNearbyGymsUseCase {
-  constructor(private gysRepository: GymsRepository) {}
+  constructor(private gymsRepository: GymsRepository) {}
 
   async execute({
     userLatidade,
     userLongitude,
   }: FetchNearbyGymsUseCaseRequest): Promise<FetchNearbyGymsUseCaseResponse> {
-    const gyms = await this.gysRepository.searchManyNearby({
+    const gyms = await this.gymsRepository.searchManyNearby({
       latitude: userLatidade,
       longitude: userLongitude,
     })
