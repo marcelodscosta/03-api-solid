@@ -43,9 +43,6 @@ export class InMemoryCheckInRepository implements ChekInsRepository {
   }
 
   async countByUserId(userId: string) {
-    console.log(`Id do usuário: ${userId}`)
-    console.log(`todo o array: ${this.items}`)
-
     return this.items.filter((item) => item.user_id === userId).length
   }
 
