@@ -2,7 +2,7 @@ import { makeFetchNearbyGymsUseCase } from '@/use-cases/factories/make-fetch-nea
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 
-export async function nearby(request: FastifyRequest, replay: FastifyReply) {
+export async function nearby(request: FastifyRequest, reply: FastifyReply) {
   const nearbyGymsQuerySchema = z.object({
     latitude: z.number().refine((value) => {
       return Math.abs(value) <= 90
@@ -21,7 +21,7 @@ export async function nearby(request: FastifyRequest, replay: FastifyReply) {
     userLongitude: longitude,
   })
 
-  replay.status(200).send({
+  reply.status(200).send({
     gyms,
   })
 }

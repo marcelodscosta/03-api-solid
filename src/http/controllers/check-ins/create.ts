@@ -2,7 +2,7 @@ import { makeCheckInUseCase } from '@/use-cases/factories/make-check-in-use-case
 import { FastifyRequest, FastifyReply } from 'fastify'
 import { z } from 'zod'
 
-export async function create(request: FastifyRequest, replay: FastifyReply) {
+export async function create(request: FastifyRequest, reply: FastifyReply) {
   const createCheckInParamsSchema = z.object({
     gymId: z.string().uuid(),
   })
@@ -28,5 +28,5 @@ export async function create(request: FastifyRequest, replay: FastifyReply) {
     userId: request.user.sub,
   })
 
-  return replay.status(200).send()
+  return reply.status(200).send()
 }
